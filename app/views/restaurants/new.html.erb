@@ -1,0 +1,37 @@
+<div>
+  <h1 class="text-center">Restaurants#new</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-offset-4 col-sm-4">
+        <%= simple_form_for(@restaurant, html: { class: 'form-horizontal' }) do |f| %>
+          <div>
+            <fieldset>
+              <%= f.label :name %>:
+              <%= f.text_field :name %><br />
+           </fieldset>
+          </div>
+          <div>
+            <fieldset>
+              <%= f.label :phone_number %>:
+              <%= f.text_field :phone_number %><br />
+           </fieldset>
+          </div>
+          <div>
+            <fieldset>
+              <%= f.label :address %>:
+              <%= f.text_field :address %><br />
+           </fieldset>
+          </div>
+          <div>
+            <fieldset>
+              <%= f.label :category %>:
+              <%= f.text_field :category %><br />
+           </fieldset>
+          </div>
+          <%= f.submit "Create" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

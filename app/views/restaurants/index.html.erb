@@ -1,0 +1,24 @@
+<div class="text-center">
+  <h1>Restaurants</h1>
+  <p>-------------</p>
+  <div class="container">
+    <% @restaurants.each do |restaurant| %>
+      <div class="row">
+        <div class="col-sm-6">
+          <p><%= restaurant.name %></p>
+          <p><%= restaurant.phone_number %></p>
+        </div>
+        <div class="col-sm-6">
+          <p><%= restaurant.category %></p>
+          <p><%= restaurant.address %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12"></div>
+        <%= link_to "See details", restaurant_path(restaurant.id), class: "btn btn-primary"%>
+        <%#= link_to "Write review", new_restaurant_review_path(restaurant.id), class: "btn btn-primary"%>
+        <p><%= "-" * 80 %></p>
+      </div>
+    <% end %>
+  </div>
+</div>

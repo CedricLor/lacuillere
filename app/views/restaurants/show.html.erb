@@ -1,0 +1,12 @@
+<div class="text-center">
+  <h1><%= @restaurant.name %></h1>
+  <p><%= @restaurant.phone_number %></p>
+  <p><%= @restaurant.address %></p>
+  <p><%= @restaurant.category %></p>
+  <ol>
+    <%= render @reviews %>
+  </ol>
+  <section>
+    <%= render 'shared/review_form' %>
+  </section>
+</div>

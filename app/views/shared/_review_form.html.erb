@@ -1,0 +1,7 @@
+<%#= simple_form_for(@review) do |f| %>
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.error_notification %>
+  <%= f.text_area :content, placeholder: "Compose new review..." %>
+  <%= f.input :rating, collection: 0..5 %>
+  <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>
